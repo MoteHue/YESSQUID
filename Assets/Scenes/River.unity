@@ -136,6 +136,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 199435688095898785, guid: 9d49a2c305b44b54b9f0461664a798b9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244042641983677454, guid: 9d49a2c305b44b54b9f0461664a798b9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5176238452490163166, guid: 9d49a2c305b44b54b9f0461664a798b9,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1029,6 +1039,11 @@ PrefabInstance:
       propertyPath: scoreCounter
       value: 
       objectReference: {fileID: 562401846}
+    - target: {fileID: 8467706826895018253, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8467706826895018259, guid: 3f45471a32815f54da99a6ad25eee869,
         type: 3}
       propertyPath: m_Pivot.x
