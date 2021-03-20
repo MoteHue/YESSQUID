@@ -29,6 +29,12 @@ public class PlayerController : MonoBehaviour
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
             animator.SetTrigger("Jump");
+            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX;
+            Invoke(nameof(ResolveJump), 0.5f);
         }
+    }
+
+    void ResolveJump() {
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
     }
 }
