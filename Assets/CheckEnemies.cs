@@ -58,13 +58,13 @@ public class CheckEnemies : MonoBehaviour
         //TODO
         switch (col.gameObject.tag){
             case "Rod":
-                GameOver("You were caught by a fisherman");
+                GameOver("It's the end of the LINE for this fish");
                 break;
             case "Log":
                 GameOver("Your death has been LOGged with an administrator");
                 break;
             case "Rock":
-                GameOver("You sustained injuries from colliding with a rock");
+                GameOver("That was a bold move. Missing the rock would've been BOULDER");
                 break;
             case "Bird":
                 GameOver("You were scooped up by a bird and eaten");
