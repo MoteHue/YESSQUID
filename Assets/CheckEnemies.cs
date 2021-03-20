@@ -8,7 +8,9 @@ public class CheckEnemies : MonoBehaviour
     public PlayerController movement;
     public GameObject ui;
     public Text _reason;
-    
+    public Text _score;
+    public ScoreCounter scoreCounter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,8 @@ public class CheckEnemies : MonoBehaviour
         Debug.Log("Game Over - " + reason);
         ui.SetActive(true);
         _reason.text = reason;
+        int s = scoreCounter.score;
+        _score.text = "Your final score was " + s;
     }
 
     void DisableMovement(){
