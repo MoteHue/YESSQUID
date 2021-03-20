@@ -32,8 +32,23 @@ public class CheckEnemies : MonoBehaviour
         _score.text = "Your final score was " + s;
     }
 
+    void IncrementScore(int amount){
+        scoreCounter.score += amount;
+    }
+
     void DisableMovement(){
         movement.enabled = false;
+    }
+
+    void OnTriggerEnter (Collider t){
+        switch (t.transform.name){
+            case "Insect":
+                IncrementScore(5);
+                Debug.Log("yom yom tasty INSECT");
+                break;
+            default:
+                break;
+        }
     }
 
     void OnCollisionEnter (Collision col){
@@ -54,6 +69,10 @@ public class CheckEnemies : MonoBehaviour
             case "Debris":
                 GameOver("You got suffocated by debris");
                 break;
+            //case "Insect":
+            //    IncrementScore(5);
+            //    Debug.Log("yom yom tasty INSECT");
+            //    break;
             default:
                 break;
         }

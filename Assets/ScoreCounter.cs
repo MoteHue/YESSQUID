@@ -5,13 +5,13 @@ using UnityEngine;
 public class ScoreCounter : MonoBehaviour
 {
     public int score;
-    public int lifetimes;
+    public int generations;
 
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
-        lifetimes = 1;
+        generations = 1;
     }
 
     // Update is called once per frame
