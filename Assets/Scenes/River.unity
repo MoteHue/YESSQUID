@@ -1462,6 +1462,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6633772281317800213, guid: 16b5046c47d2be44d96a1cbf9ea87e0b,
+        type: 3}
+      propertyPath: m_Name
+      value: Log
+      objectReference: {fileID: 0}
     - target: {fileID: 6864512786375684374, guid: 16b5046c47d2be44d96a1cbf9ea87e0b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1547,10 +1552,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: River Segment
       objectReference: {fileID: 0}
+    - target: {fileID: 9044415308036079913, guid: 16b5046c47d2be44d96a1cbf9ea87e0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9044415308036079915, guid: 16b5046c47d2be44d96a1cbf9ea87e0b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8ea18159dca1cd4478165fff76d326cb, type: 2}
+    - target: {fileID: 9044415308766154214, guid: 16b5046c47d2be44d96a1cbf9ea87e0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044415308992791470, guid: 16b5046c47d2be44d96a1cbf9ea87e0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b5046c47d2be44d96a1cbf9ea87e0b, type: 3}

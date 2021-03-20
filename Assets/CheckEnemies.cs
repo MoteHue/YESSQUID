@@ -60,6 +60,9 @@ public class CheckEnemies : MonoBehaviour
             case "Line":
                 GameOver("You were caught by a fisherman");
                 break;
+            case "Log":
+                GameOver("Your death has been LOGged with an administrator");
+                break;
             case "Rock":
                 GameOver("You sustained injuries from colliding with a rock");
                 break;
