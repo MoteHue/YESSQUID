@@ -1039,6 +1039,26 @@ PrefabInstance:
       propertyPath: scoreCounter
       value: 
       objectReference: {fileID: 562401846}
+    - target: {fileID: 3360865176795465688, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360865176795465688, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360865176795465688, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: gameEndsAfterSegments
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8467706826895018253, guid: 3f45471a32815f54da99a6ad25eee869,
         type: 3}
       propertyPath: m_CollisionDetection
