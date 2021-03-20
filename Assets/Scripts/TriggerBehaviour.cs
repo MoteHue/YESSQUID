@@ -23,10 +23,10 @@ public class TriggerBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         player.counter++;
-        if (player.counter < 10) {
+        if (player.counter < player.gameEndsAfterSegments) {
             OtherRiverSegment.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 218f);
         } else {
-            
+            Instantiate(RiverEnd, new Vector3(transform.position.x + 2.7f, transform.position.y, transform.position.z + 170f), transform.rotation);
         }
         
 

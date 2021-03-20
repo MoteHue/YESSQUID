@@ -1051,7 +1051,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OtherRiverSegment: {fileID: 0}
-  RiverEnd: {fileID: 0}
+  RiverEnd: {fileID: 7291499749370327000, guid: 94d81eb88e772c4418f4abc8e2b53efc,
+    type: 3}
   _distanceBasedScore: 10
 --- !u!1001 &501074918255703957
 PrefabInstance:

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
 
     public int counter;
+    public int gameEndsAfterSegments = 4;
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
