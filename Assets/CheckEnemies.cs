@@ -43,9 +43,9 @@ public class CheckEnemies : MonoBehaviour
     }
 
     void OnTriggerEnter (Collider t){
-        switch (t.transform.name){
-            case "Insect":
-                Destroy(t.gameObject);
+        switch (t.gameObject.tag){
+            case "Bug":
+                t.gameObject.SetActive(false);
                 IncrementScore(5);
                 //Debug.Log("yom yom tasty INSECT");
                 break;
@@ -56,8 +56,8 @@ public class CheckEnemies : MonoBehaviour
 
     void OnCollisionEnter (Collision col){
         //TODO
-        switch (col.transform.name){
-            case "Line":
+        switch (col.gameObject.tag){
+            case "Rod":
                 GameOver("You were caught by a fisherman");
                 break;
             case "Log":
