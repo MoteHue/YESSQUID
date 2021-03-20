@@ -45,7 +45,7 @@ public class CheckEnemies : MonoBehaviour
     void OnTriggerEnter (Collider t){
         switch (t.transform.name){
             case "Insect":
-                Destroy(t.gameObject);
+                t.gameObject.SetActive(false);
                 IncrementScore(5);
                 //Debug.Log("yom yom tasty INSECT");
                 break;
