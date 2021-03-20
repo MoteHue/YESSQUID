@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody rb;
 
+    public int counter;
+
     private void Start() {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
