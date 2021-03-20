@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Database;
 
 public class ScoreCounter : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class ScoreCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DatabaseConnector.GetYear((int year, bool isEnd) => {
+            Debug.Log(year);
+            Debug.Log(isEnd);
+        });
+
         score = -10;
         generations = 1;
     }
