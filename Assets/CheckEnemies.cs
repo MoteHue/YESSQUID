@@ -23,7 +23,7 @@ public class CheckEnemies : MonoBehaviour
 
     void GameOver(string reason){
         DisableMovement();
-        Debug.Log(reason);
+        Debug.Log("Game Over - " + reason);
         ui.SetActive(true);
         _reason.text = reason;
     }
@@ -34,8 +34,24 @@ public class CheckEnemies : MonoBehaviour
 
     void OnCollisionEnter (Collision col){
         //TODO
-        if (col.transform.name == "Line"){
-            GameOver("You were caught by a fisherman");
+        switch (col.transform.name){
+            case "Line":
+                GameOver("You were caught by a fisherman");
+                break;
+            case "Rock":
+                GameOver("You sustained injuries from colliding with a rock");
+                break;
+            case "Bird":
+                GameOver("You were scooped up by a bird and eaten");
+                break;
+            case "Bear":
+                GameOver("You were eaten by a bear");
+                break;
+            case "Debris":
+                GameOver("You got suffocated by debris");
+                break;
+            default:
+                break;
         }
     }  
 }
