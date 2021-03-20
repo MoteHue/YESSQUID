@@ -170,7 +170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666933611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.3000183, z: -114.3}
+  m_LocalPosition: {x: 0, y: 2.3000183, z: -90.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1087558341}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
-  riverSpeed: 25
+  riverSpeed: 30
 --- !u!1 &725728950
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725728950}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 35.9, z: -107.7}
+  m_LocalPosition: {x: 0, y: 92.4, z: -83.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -485,6 +485,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5976640750925225399, guid: 16b5046c47d2be44d96a1cbf9ea87e0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915200296067733360, guid: 16b5046c47d2be44d96a1cbf9ea87e0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -75.956985
+      objectReference: {fileID: 0}
     - target: {fileID: 8491239585168663973, guid: 16b5046c47d2be44d96a1cbf9ea87e0b,
         type: 3}
       propertyPath: parent
