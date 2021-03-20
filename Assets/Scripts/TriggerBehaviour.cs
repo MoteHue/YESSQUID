@@ -1,19 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class TriggerBehaviour : MonoBehaviour
 {
-    public GameObject RiverSegment;
-    public GameObject parent;
+    public GameObject OtherRiverSegment;
+    ScoreCounter score;
 
-    private void OnTriggerEnter(Collider other) {
-        Instantiate(RiverSegment, gameObject.GetComponentInParent<Transform>().position + new Vector3(0f, 0f, 173.5f), gameObject.GetComponentInParent<Transform>().rotation);
-        Invoke(nameof(Die), 15f);
+    public int _distanceBasedScore = 10;
+
+    private void Start() {
+        score = FindObjectOfType<ScoreCounter>();
+        List<Randomisable> randomisables = OtherRiverSegment.GetComponentsInChildren<Randomisable>(true).ToList();
+        foreach (Randomisable r in randomisables) {
+            r.gameObject.SetActive(false);
+        }
     }
 
-    void Die() {
-        Destroy(parent);
+    private void OnTriggerEnter(Collider other) {
+        OtherRiverSegment.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 218f);
+
+        score.score+= _distanceBasedScore;
+
+        List<Randomisable> randomisables = OtherRiverSegment.GetComponentsInChildren<Randomisable>(true).ToList();
+        foreach (Randomisable r in randomisables) {
+            r.gameObject.SetActive(Random.Range(0, 10) <= 4);
+        }
     }
 
 }
