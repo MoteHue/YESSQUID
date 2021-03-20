@@ -29,7 +29,9 @@ public class CheckEnemies : MonoBehaviour
         ui.SetActive(true);
         _reason.text = reason;
         int s = scoreCounter.score;
-        _score.text = "Your final score was " + s;
+        int g = scoreCounter.generations;
+        _score.text = "Your final score was " + s + "\nYour line survived for " + g + " generation";
+        if (g != 1) _score.text += "s";
     }
 
     void IncrementScore(int amount){
@@ -43,8 +45,9 @@ public class CheckEnemies : MonoBehaviour
     void OnTriggerEnter (Collider t){
         switch (t.transform.name){
             case "Insect":
+                Destroy(t.gameObject);
                 IncrementScore(5);
-                Debug.Log("yom yom tasty INSECT");
+                //Debug.Log("yom yom tasty INSECT");
                 break;
             default:
                 break;
@@ -69,10 +72,6 @@ public class CheckEnemies : MonoBehaviour
             case "Debris":
                 GameOver("You got suffocated by debris");
                 break;
-            //case "Insect":
-            //    IncrementScore(5);
-            //    Debug.Log("yom yom tasty INSECT");
-            //    break;
             default:
                 break;
         }
