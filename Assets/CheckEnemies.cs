@@ -8,7 +8,9 @@ public class CheckEnemies : MonoBehaviour
     public PlayerController movement;
     public GameObject ui;
     public Text _reason;
-    
+    public Text _score;
+    public ScoreCounter scoreCounter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +28,30 @@ public class CheckEnemies : MonoBehaviour
         Debug.Log("Game Over - " + reason);
         ui.SetActive(true);
         _reason.text = reason;
+        int s = scoreCounter.score;
+        int g = scoreCounter.generations;
+        _score.text = "Your final score was " + s + "\nYour line survived for " + g + " generation";
+        if (g != 1) _score.text += "s";
+    }
+
+    void IncrementScore(int amount){
+        scoreCounter.score += amount;
     }
 
     void DisableMovement(){
         movement.enabled = false;
+    }
+
+    void OnTriggerEnter (Collider t){
+        switch (t.transform.name){
+            case "Insect":
+                Destroy(t.gameObject);
+                IncrementScore(5);
+                //Debug.Log("yom yom tasty INSECT");
+                break;
+            default:
+                break;
+        }
     }
 
     void OnCollisionEnter (Collision col){
