@@ -9,4 +9,8 @@ public class GameOverBehaviour : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
+
+    public void Continue() {
+        SceneManager.LoadScene("Transition");
+    }
 }

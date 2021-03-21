@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/River.unity
+    guid: 34ab0d8f85e90234d883919d379f6cdf
+  - enabled: 1
+    path: Assets/Scenes/Transition.unity
+    guid: 1665fbbc32672034b8313f3c74bd4408
   m_configObjects: {}
