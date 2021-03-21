@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
     public int counter;
     public int gameEndsAfterSegments = 4;
 
+    int genCounter = 1;
+
+    public List<Material> waterColours;
+    public List<GameObject> planes;
+
     private void Start() {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
@@ -35,6 +40,15 @@ public class PlayerController : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX;
             Invoke(nameof(ResolveJump), 0.5f);
         }
+
+        if (genCounter < Stats._generations) {
+            genCounter++;
+            foreach (GameObject plane in planes) {
+                plane.GetComponent<MeshRenderer>().material = waterColours[Mathf.Min(genCounter-1, waterColours.Count-1)];
+            }
+        }
+
+        
     }
 
     void ResolveJump() {

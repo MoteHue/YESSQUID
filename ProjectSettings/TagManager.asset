@@ -8,6 +8,7 @@ TagManager:
   - Bug
   - Log
   - RiverEnd
+  - Rock
   layers:
   - Default
   - TransparentFX
