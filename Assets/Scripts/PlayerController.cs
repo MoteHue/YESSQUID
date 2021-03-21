@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         moveForce = new Vector3(Input.GetAxis("Horizontal") * 2f, 0f, Input.GetAxis("Vertical")) * moveSpeed;
 
-        rb.AddForce(moveForce + riverForce);
+        rb.AddForce(moveForce + riverForce + new Vector3(0f, 0f, 5f * Stats._generations));
     }
 
     private void Update() {

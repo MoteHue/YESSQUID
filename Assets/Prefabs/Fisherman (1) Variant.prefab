@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 0
   max: 10
-  thresh: 2
-  minGenReq: 2
+  thresh: -2
 --- !u!65 &7575978460043335281
 BoxCollider:
   m_ObjectHideFlags: 0
