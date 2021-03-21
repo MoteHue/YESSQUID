@@ -38,6 +38,7 @@ public class SetText : MonoBehaviour
     void Awake(){
         s = Stats._score;
         g = Stats._generations;
+        g = g+1;
         TransitionMessage();
 
         Stats._generations = g+1;
