@@ -9,6 +9,7 @@ TagManager:
   - Log
   - RiverEnd
   - Rock
+  - FishFood
   layers:
   - Default
   - TransparentFX
