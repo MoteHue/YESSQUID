@@ -1380,18 +1380,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8467706827327066237}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &2146855352
+--- !u!82 &2146855353
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146855347}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b6309ce90977d8941b51cb2f6d58ea33, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 059dc4e36ef8ddf45b6c100d31d0e978, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1500,6 +1500,11 @@ PrefabInstance:
       objectReference: {fileID: 266955309}
     - target: {fileID: 548544090931605540, guid: 3f45471a32815f54da99a6ad25eee869,
         type: 3}
+      propertyPath: buzzSound
+      value: 
+      objectReference: {fileID: 2146855353}
+    - target: {fileID: 548544090931605540, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
       propertyPath: _finalScore
       value: 
       objectReference: {fileID: 275728803}
@@ -1523,6 +1528,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8ea18159dca1cd4478165fff76d326cb, type: 2}
+    - target: {fileID: 6290387354009983213, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
         type: 3}
       propertyPath: gameEndsAfterSegments
