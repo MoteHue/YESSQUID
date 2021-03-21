@@ -31,6 +31,7 @@ public class TriggerBehaviour : MonoBehaviour
         
 
         score.score+= _distanceBasedScore;
+        Stats._score += _distanceBasedScore;
         
 
         List<Randomisable> randomisables = OtherRiverSegment.GetComponentsInChildren<Randomisable>(true).ToList();

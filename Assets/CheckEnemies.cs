@@ -14,6 +14,9 @@ public class CheckEnemies : MonoBehaviour
     public Text _finalScore;
     public ScoreCounter scoreCounter;
 
+    public AudioSource buzzSound;
+    public AudioSource hurt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +54,7 @@ public class CheckEnemies : MonoBehaviour
 
     void IncrementScore(int amount){
         scoreCounter.score += amount;
+        Stats._score += amount;
     }
 
     void DisableMovement(){
@@ -62,6 +66,7 @@ public class CheckEnemies : MonoBehaviour
             case "Bug":
                 t.gameObject.SetActive(false);
                 IncrementScore(5);
+                buzzSound.Play();
                 //Debug.Log("yom yom tasty INSECT");
                 break;
             case "FishFood":
@@ -80,21 +85,27 @@ public class CheckEnemies : MonoBehaviour
         //TODO
         switch (col.gameObject.tag){
             case "Rod":
+                hurt.Play();
                 GameOver("It's the end of the LINE for this fish");
                 break;
             case "Log":
+                hurt.Play();
                 GameOver("Your death has been LOGged with an administrator");
                 break;
             case "Rock":
+                hurt.Play();
                 GameOver("That was a bold move. Missing the rock would've been BOULDER");
                 break;
             case "Bird":
+                hurt.Play();
                 GameOver("You were scooped up by a bird and eaten");
                 break;
             case "Bear":
+                hurt.Play();
                 GameOver("You were eaten by a bear");
                 break;
             case "Debris":
+                hurt.Play();
                 GameOver("You got suffocated by debris");
                 break;
             default:

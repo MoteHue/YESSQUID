@@ -7,6 +7,7 @@ public static class Stats
     private static int score = 0;
     private static int generations = 1;
     private static int t;
+    private static string username = "aaa";
 
     public static int _score{
         get{
@@ -32,6 +33,15 @@ public static class Stats
         }
         set{
             t = value;
+        }
+    }
+
+    public static string _username {
+        get {
+            return username;
+        }
+        set {
+            username = value;
         }
     }
 }
