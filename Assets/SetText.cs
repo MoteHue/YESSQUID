@@ -32,7 +32,7 @@ public class SetText : MonoBehaviour
 
     int GetSalmonNumber(){
         int diff = s_start-s_end;
-        return Math.Min(s_start - g*(diff/10),1);
+        return Math.Max(s_start - g*(diff/10),1);
     }
 
     void Awake(){
