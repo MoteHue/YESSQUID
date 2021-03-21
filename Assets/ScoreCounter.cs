@@ -7,6 +7,7 @@ public class ScoreCounter : MonoBehaviour
 {
     public int score;
     public int generations;
+    public GameObject overflow;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,6 @@ public class ScoreCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (generations >= 6) overflow.SetActive(true);
     }
 }

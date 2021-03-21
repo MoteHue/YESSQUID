@@ -530,6 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   generations: 0
+  overflow: {fileID: 1889628950}
 --- !u!1 &645085734
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,6 +828,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 24.52, y: -38.15, z: 0}
+--- !u!4 &1229972356 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8805901719084177412, guid: 3f45471a32815f54da99a6ad25eee869,
+    type: 3}
+  m_PrefabInstance: {fileID: 8467706827327066237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1344797676
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -27,7 +27,7 @@ public class SetText : MonoBehaviour
 
     int GetYear(){
         int diff = end-start;
-        return start + g*(diff / (10));
+        return start + (g-1)*(diff / (10));
     }
 
     int GetSalmonNumber(){
