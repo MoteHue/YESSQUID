@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public float riverSpeed;
+    public AudioSource flipNoise;
 
     Vector3 moveForce;
     Vector3 riverForce;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
             animator.SetTrigger("Jump");
+            flipNoise.enabled = true;
             rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX;
             Invoke(nameof(ResolveJump), 0.5f);
         }
@@ -53,5 +55,6 @@ public class PlayerController : MonoBehaviour
 
     void ResolveJump() {
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
+        flipNoise.enabled = false;
     }
 }
