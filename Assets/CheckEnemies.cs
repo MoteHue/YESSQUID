@@ -14,6 +14,8 @@ public class CheckEnemies : MonoBehaviour
     public Text _finalScore;
     public ScoreCounter scoreCounter;
 
+    public AudioSource buzzSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,7 @@ public class CheckEnemies : MonoBehaviour
             case "Bug":
                 t.gameObject.SetActive(false);
                 IncrementScore(5);
+                buzzSound.Play();
                 //Debug.Log("yom yom tasty INSECT");
                 break;
             case "RiverEnd":
