@@ -1411,11 +1411,56 @@ PrefabInstance:
       propertyPath: scoreCounter
       value: 
       objectReference: {fileID: 562401846}
+    - target: {fileID: 4992171002831097865, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ea18159dca1cd4478165fff76d326cb, type: 2}
+    - target: {fileID: 6076849451355445610, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ea18159dca1cd4478165fff76d326cb, type: 2}
     - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
         type: 3}
       propertyPath: gameEndsAfterSegments
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: waterColours.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: waterColours.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ea18159dca1cd4478165fff76d326cb, type: 2}
+    - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: waterColours.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b14930575ed41d43bc18f998cbd4a20, type: 2}
+    - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: waterColours.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: eabcb729e1980054793527702bc1e4e4, type: 2}
+    - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: waterColours.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1789d6d449b5c6048b21d56c680e0af0, type: 2}
+    - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: waterColours.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8a04902e8bf4c6b469961ef2116622e1, type: 2}
+    - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: waterColours.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9753475fd322b8544a98368a48ec65f8, type: 2}
     - target: {fileID: 8467706826895018253, guid: 3f45471a32815f54da99a6ad25eee869,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -1531,5 +1576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish
       objectReference: {fileID: 0}
+    - target: {fileID: 8645873715007899268, guid: 3f45471a32815f54da99a6ad25eee869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ea18159dca1cd4478165fff76d326cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f45471a32815f54da99a6ad25eee869, type: 3}
