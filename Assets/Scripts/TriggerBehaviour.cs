@@ -35,7 +35,8 @@ public class TriggerBehaviour : MonoBehaviour
 
         List<Randomisable> randomisables = OtherRiverSegment.GetComponentsInChildren<Randomisable>(true).ToList();
         foreach (Randomisable r in randomisables) {
-            r.gameObject.SetActive(Random.Range(0, 10) <= 4);
+            int rand = Random.Range(r.min, r.max);
+            if (Stats._generations >= r.minGenReq) r.gameObject.SetActive(rand <= r.thresh + Stats._generations);
         }
     }
 

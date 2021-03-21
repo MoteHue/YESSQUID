@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Randomisable : MonoBehaviour
 {
-
+    public int min = 0;
+    public int max = 10;
+    public int thresh = 4;
+    public int minGenReq = 1;
 }
