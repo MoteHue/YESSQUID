@@ -1414,7 +1414,7 @@ PrefabInstance:
     - target: {fileID: 8467706826895018252, guid: 3f45471a32815f54da99a6ad25eee869,
         type: 3}
       propertyPath: gameEndsAfterSegments
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8467706826895018253, guid: 3f45471a32815f54da99a6ad25eee869,
         type: 3}

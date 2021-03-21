@@ -41,7 +41,7 @@ public class SetText : MonoBehaviour
         g = g+1;
         TransitionMessage();
 
-        Stats._generations = g+1;
+        Stats._generations = g;
     }
 
     void TransitionMessage(){
