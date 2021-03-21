@@ -64,6 +64,10 @@ public class CheckEnemies : MonoBehaviour
                 IncrementScore(5);
                 //Debug.Log("yom yom tasty INSECT");
                 break;
+            case "FishFood":
+                t.gameObject.SetActive(false);
+                IncrementScore(1);
+                break;
             case "RiverEnd":
                 LevelComplete();
                 break;

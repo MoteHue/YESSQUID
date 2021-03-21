@@ -48,7 +48,7 @@ public class SetText : MonoBehaviour
         //
         int year = GetYear();
         int num = GetSalmonNumber();
-        if (num <= 1) t.text = String.Format("You are now in generation {0}\nYour total lifetime score is {2}\nThe year is {1}\n\nYou are one of the only remaining salmon left in Snake River, Northern USA\n\nHow much longer can your lineage survive in these \nharsher conditions left by climate change", g, year, s);
-        else t.text = String.Format("You are now in generation {0}\nYour total lifetime score is {3}\nThe year is {1}\n\nThere are roughly {2} salmon left in Snake River, Northern USA\n\nTry to continue your lineage for another generation in these\nharsher conditions left by climate change", g, year, num, s);
+        if (num <= 1) t.text = String.Format("You are now in generation {0}\nYour total lifetime score is {2}\nThe year is {1}\n\nYou are one of the only remaining salmon left in Snake River, Northern USA\nOther fish are rarer and there are more obstacles in the river\n\nHow much longer can your lineage survive in these \nharsher conditions left by climate change", g, year, s);
+        else t.text = String.Format("You are now in generation {0}\nYour total lifetime score is {3}\nThe year is {1}\n\nThere are roughly {2} salmon left in Snake River, Northern USA\nOther fish are rarer and there are more obstacles in the river\n\nTry to continue your lineage for another generation in these\nharsher conditions left by climate change", g, year, num, s);
     }
 }

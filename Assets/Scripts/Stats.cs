@@ -5,7 +5,7 @@ using UnityEngine;
 public static class Stats
 {
     private static int score = 0;
-    private static int generations = 1;
+    private static int generations = 4;
     private static int t;
 
     public static int _score{

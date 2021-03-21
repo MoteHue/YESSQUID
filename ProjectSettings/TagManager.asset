@@ -8,6 +8,8 @@ TagManager:
   - Bug
   - Log
   - RiverEnd
+  - Rock
+  - FishFood
   layers:
   - Default
   - TransparentFX
