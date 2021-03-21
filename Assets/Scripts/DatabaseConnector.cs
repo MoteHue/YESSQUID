@@ -12,6 +12,7 @@ namespace Database {
 
         public delegate void GetDifficultyCallback(float difficulty);
         public delegate void GetYearCallback(int currentYear, bool isEnd);
+        public delegate void GetGenerationCallback(int currentGeneration);
 
         public static async void NewScore(string username, int score) {
             HttpResponseMessage res = await client.PostAsync(url + "/newScore?userName=" + username + "&score=" + score, httpContent);
@@ -34,6 +35,14 @@ namespace Database {
             callback(yearRespose.currentYear, yearRespose.isEnd);
         }
 
+        public static async void GetGeneration(GetGenerationCallback callback) {
+            HttpResponseMessage res = await client.GetAsync(url + "/getGeneration");
+            res.EnsureSuccessStatusCode();
+            string content = await res.Content.ReadAsStringAsync();
+            GenerationResponse generationRespose = JsonUtility.FromJson<GenerationResponse>(content);
+            callback(generationRespose.generation);
+        }
+
         private class DifficultyRespose {
             public float difficulty;
         }
@@ -41,6 +50,10 @@ namespace Database {
         private class YearRespose {
             public int currentYear;
             public bool isEnd;
+        }
+
+        private class GenerationResponse {
+            public int generation;
         }
     }
 }

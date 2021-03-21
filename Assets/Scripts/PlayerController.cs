@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Database;
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,6 +28,11 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         moveForce = new Vector3();
         riverForce = new Vector3(0f, 0f, riverSpeed);
+
+        DatabaseConnector.GetGeneration((int currentGeneration) => {
+            Debug.Log(currentGeneration);
+            Stats._generations = currentGeneration;
+        });
     }
 
     private void FixedUpdate() {
