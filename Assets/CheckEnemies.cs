@@ -54,6 +54,7 @@ public class CheckEnemies : MonoBehaviour
 
     void IncrementScore(int amount){
         scoreCounter.score += amount;
+        Stats._score += amount;
     }
 
     void DisableMovement(){

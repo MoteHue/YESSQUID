@@ -12,7 +12,7 @@ public class GameOverBehaviour : MonoBehaviour
 
     public void Restart() {
         button.gameObject.SetActive(true);
-
+        
         Stats._generations = 1;
         Stats._score = 0;
         Scene scene = SceneManager.GetActiveScene();
