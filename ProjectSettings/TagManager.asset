@@ -7,6 +7,7 @@ TagManager:
   - Rod
   - Bug
   - Log
+  - RiverEnd
   layers:
   - Default
   - TransparentFX

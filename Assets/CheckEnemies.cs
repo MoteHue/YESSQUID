@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static Stats;
 
 public class CheckEnemies : MonoBehaviour
 {
     public PlayerController movement;
     public GameObject ui;
+    public GameObject complete_ui;
     public Text _reason;
     public Text _score;
+    public Text _finalScore;
     public ScoreCounter scoreCounter;
 
     // Start is called before the first frame update
@@ -21,6 +24,18 @@ public class CheckEnemies : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void LevelComplete(){
+        scoreCounter.score += 30;
+        DisableMovement();
+        complete_ui.SetActive(true);
+        int s = scoreCounter.score;
+        int g = scoreCounter.generations;
+        _finalScore.text = "Your score was " + s +"\nYou have completed generation " + g;
+
+        Stats._score = s;
+        Stats._generations = g;
     }
 
     void GameOver(string reason){
@@ -48,6 +63,9 @@ public class CheckEnemies : MonoBehaviour
                 t.gameObject.SetActive(false);
                 IncrementScore(5);
                 //Debug.Log("yom yom tasty INSECT");
+                break;
+            case "RiverEnd":
+                LevelComplete();
                 break;
             default:
                 break;
