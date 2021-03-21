@@ -32,7 +32,7 @@ public class SetText : MonoBehaviour
 
     int GetSalmonNumber(){
         int diff = s_start-s_end;
-        return s_start - g*(diff/10);
+        return Math.Min(s_start - g*(diff/10),1);
     }
 
     void Awake(){
@@ -48,6 +48,7 @@ public class SetText : MonoBehaviour
         //
         int year = GetYear();
         int num = GetSalmonNumber();
-        t.text = String.Format("You are now in generation {0}\nYour total lifetime score is {3}\nThe year is {1}\n\nThere are roughly {2} salmon left in Snake River, Northern USA\n\nTry to continue your lineage for another generation in these\nharsher conditions left by climate change", g, year, num, s);
+        if (num <= 1) t.text = String.Format("You are now in generation {0}\nYour total lifetime score is {2}\nThe year is {1}\n\nYou are one of the only remaining salmon left in Snake River, Northern USA\n\nHow much longer can your lineage survive in these \nharsher conditions left by climate change", g, year, s);
+        else t.text = String.Format("You are now in generation {0}\nYour total lifetime score is {3}\nThe year is {1}\n\nThere are roughly {2} salmon left in Snake River, Northern USA\n\nTry to continue your lineage for another generation in these\nharsher conditions left by climate change", g, year, num, s);
     }
 }
